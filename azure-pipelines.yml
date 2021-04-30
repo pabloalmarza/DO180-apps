@@ -5,6 +5,8 @@
 
 trigger:
 - master
+steps:
+  - 
 - task: SynopsysDetectTask@6
   inputs:
     BlackDuckService: 'blackduck1'
