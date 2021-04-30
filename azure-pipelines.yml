@@ -6,9 +6,8 @@
 trigger:
 - master
 steps:
-  - 
-- task: SynopsysDetectTask@6
-  inputs:
-    BlackDuckService: 'blackduck1'
-    DetectVersion: 'latest'
-    DetectArguments: '--blackduck.trust.cert=true'
+  - task: SynopsysDetectTask@6
+    inputs:
+      BlackDuckService: 'blackduck1'
+      DetectVersion: 'latest'
+      DetectArguments: '--blackduck.trust.cert=true'
