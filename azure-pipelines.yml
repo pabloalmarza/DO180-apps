@@ -2,21 +2,12 @@
 trigger:
 - master
 steps:
+
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'wget https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-detect/6.9.1/synopsys-detect-6.9.1-air-gap.zip -P /home/vsts/work/1'
-- task: ExtractFiles@1
-  inputs:
-    archiveFilePatterns: '/home/vsts/work/1/**.zip'
-    destinationFolder: '/home/vsts/work/1/'
-    cleanDestinationFolder: true
-    overwriteExistingFiles: false
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'ls /tmp'
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'pwd'
+    script: |
+      wget https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-detect/6.9.1/synopsys-detect-6.9.1-air-gap.zip -P /home/vsts/work/1
+      unzip /home/vsts/work/1/*.zip
+      ls -lh /home/vsts/work/1/'
