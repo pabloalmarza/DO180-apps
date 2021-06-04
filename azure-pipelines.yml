@@ -9,7 +9,7 @@ steps:
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: '/home/vsts/work/1/**.zip'
-    destinationFolder: '.'
+    destinationFolder: '/home/vsts/work/1/'
     cleanDestinationFolder: true
     overwriteExistingFiles: false
 - task: Bash@3
