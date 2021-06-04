@@ -3,6 +3,8 @@ trigger:
 - master
 stages:
   - task: Bash@3
-    inputs:
+     inputs:
       targetType: 'inline'
-      script: 'ping cegid.app.blackduck.com'
+      script: |
+        ping cegid.app.blackduck.com
+        ping asml.app.blackduck.com
