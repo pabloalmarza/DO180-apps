@@ -6,3 +6,11 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'wget https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-detect/6.9.1/synopsys-detect-6.9.1-air-gap.zip -P /tmp/'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'unzip /tmp/*.zip'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'ls -lh /tmp'
