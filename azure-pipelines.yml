@@ -5,9 +5,4 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'nslookup cegid.app.blackduck.com'
-- task: SynopsysDetectTask@6
-  inputs:
-    BlackDuckService: 'test2'
-    DetectVersion: '6.9.1'
-    DetectArguments: '--detect.project.name=test1'
+    script: 'ls /tmp'
